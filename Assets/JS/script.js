@@ -1,17 +1,31 @@
-//The function that provided the click button life and purpose
-$("#searchBtn").on("click", function(event){
-  event.preventDefault();
+// Get the modal
+var modal = document.getElementById("myModal");
 
-  moviename = $("#userInput").val().trim();
-  if(moviename === ""){
-    alert("Please enter an actual title")
+// Get the button that opens the modal
+const btn = document.getElementById("searchBtn");
 
-  }else{
-  moviename.push(moviename);
-  } 
-  displayMovie();
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-});
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
 
 
 // Event handler if the user chooses to hit enter instead of clicking
@@ -33,16 +47,15 @@ async function displayMovie() {
   console.log(response);
 
 //fetching movie posters command
-  var settings = {
-    "url": "https://imdb-api.com/en/API/" + movieTitle + "/k_uc3lp775/tt1832382",
-    "method": "GET",
-    "timeout": 0,
-  };
-  
-  $.ajax(settings).done(function (response) {
-    console.log(response);
-  });
-
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow'
+};
+ 
+fetch("https://imdb-api.com/en/API/Title/k_uc3lp775" + movieTitle + " ", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
 }
 
 
