@@ -26,8 +26,6 @@ window.onclick = function(event) {
 
 
 
-
-
 // Event handler if the user chooses to hit enter instead of clicking
 $("#userInput").keypress(function(e){
   if(e.which == 13){
@@ -35,29 +33,45 @@ $("#userInput").keypress(function(e){
   }
 })
 
-async function displayMovie() {
+// async function displayMovie() {
 
-//fetching movie details
-  var queryURL = "https://imdb-api.com/en/API/SearchTitle/k_uc3lp775/" + movieTitle + " "
 
-  var response = await $.ajax({
-    url: queryURL,
-    method: "GET"
-  })
-  console.log(response);
-
-//fetching movie posters command
-var requestOptions = {
-  method: 'GET',
-  redirect: 'follow'
-};
+// //fetching movie posters command
+// var requestOptions = {
+//   method: 'GET',
+//   redirect: 'follow'
+// };
  
-fetch("https://imdb-api.com/en/API/Title/k_uc3lp775" + movieTitle + " ", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+// fetch("https://imdb-api.com/en/API/Title/k_uc3lp775" + movieTitle, requestOptions)
+//   .then(response => response.text())
+//   .then(result => console.log(result))
+//   .catch(error => console.log('error', error));
+// }
+
+function search (userInput) {
+  
+$.ajax({ 
+  url: "https://imdb-api.com/en/API/SearchTitle/k_uc3lp775/" + userInput,
+  method: 'GET',
+}).then(function(response) {
+  console.log(response.results[2]);
+  console.log(response)
+})
 }
 
+// errorMessage is the error response for the user's input
 
+
+// function doThis (func) {
+//   func()
+// }
+
+// function doThat () {
+//   return 1
+// }
+
+// search("lordoftherings", doThis, doThat)
 
 // k_uc3lp775
+
+search("thor")
