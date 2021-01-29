@@ -8,7 +8,7 @@ $("#searchBtn").on("click", function(event){
 
   }else{
   moviename.push(moviename);
-  }
+  } 
   displayMovie();
 
 });
