@@ -10,17 +10,6 @@
 * [Credits](#credits)
 * [License](#license)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 68cf30e3c70f266c1ffb2b2d364e7b9d65d28881
-## Installation:
-There are no steps to install. Please navigate to the deployed site using the link below.
-
-# Usage: 
-<<<<<<< HEAD
-=======
-=======
 
 ## Installation:
 
@@ -28,34 +17,14 @@ There are no steps to install. Please navigate to the deployed site using the li
 
 # Usage: 
 
->>>>>>> 478a68e91d3a2dbb0f55320fba807581f8466527
->>>>>>> 68cf30e3c70f266c1ffb2b2d364e7b9d65d28881
+
 Navigate to the deployed page to view the site. When on the site enter a movie title and click search to see the movie poster, ratings, and a discription. 
 
 ![Image of site](./Assets/Images/screenshot.png)
 
 ## License: 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 68cf30e3c70f266c1ffb2b2d364e7b9d65d28881
-MIT 
-
-## Credits: 
-Dan Arbelo, George Bravo, and Katherine Lynn.
-
-## Github deployed page: 
-[Github deployed page]()
-
-## Github repository: 
-<<<<<<< HEAD
-[Github repository](https://github.com/Govepitr/GroupProject1)
-=======
-[Github repository](https://github.com/Govepitr/GroupProject1)
-=======
 
 MIT 
-
 
 ## Credits: 
 
@@ -67,6 +36,7 @@ Dan Arbelo, George Bravo, and Katherine Lynn.
 
 ## Github repository: 
 
+
 [Github repository](https://github.com/Govepitr/GroupProject1)
->>>>>>> 478a68e91d3a2dbb0f55320fba807581f8466527
->>>>>>> 68cf30e3c70f266c1ffb2b2d364e7b9d65d28881
+
+
