@@ -1,6 +1,6 @@
 # GroupProject1
 
-## Project title: Cinema Search/other title
+## Project title: Cinema Search
 
 ## Description: This is a site that will search for movie posters, ratings, and a discription. 
 
@@ -19,7 +19,7 @@ There are no steps to install. Please navigate to the deployed site using the li
 
 Navigate to the deployed page to view the site. When on the site enter a movie title and click search to see the movie poster, ratings, and a discription. 
 
-![Image of site](./assets/image/screenshot.png)
+![Image of site](./Assets/Images/screenshot.png)
 
 ## License: 
 
