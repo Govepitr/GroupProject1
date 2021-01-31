@@ -44,9 +44,8 @@ $("#userInput").keypress(function(e){
 var button = userInput();  
 
 $("#searchBtn").click(function (){
-    $(".show").addClass("hide").removeClass("show");
-    $(".hide").addClass("show").removeClass("hide");          
-  
+  $("#movieDisplay1").css("display", "none");
+  $("#movieDisplay2").css("display", "block"); 
 
 })
 

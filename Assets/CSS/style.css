@@ -16,7 +16,9 @@ h1 {
 
 }
 
-
+#movieDisplay2 {
+  display: none;
+}
 
 
 /* The Modal(background) */
