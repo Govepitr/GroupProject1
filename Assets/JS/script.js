@@ -1,11 +1,4 @@
 
-// loadDoc()
-
-// // Get the modal
-// var modal = document.getElementById("myModal");
-
-// // Get the button that opens the modal
-// let btn = document.getElementById("searchBtn");
 
 
 // Get the <span> element that closes the modal
@@ -21,40 +14,38 @@ function userInput(){
       'method': 'GET',
       'timeout': 0,
     }).then(function(response) {
-      console.log(response, [0]);
-      console.log(response, "Title");
-      console.log(response, "Poster");
-      console.log(response, "Plot");
-      console.log(response, [0]);
-      // console.log(response);
-      // console.log(response);
-      // console.log(response);
-      // console.log(response);
-      
-      
-      var newCard = document.createNewElement("div")
-  
-        newCard.setAttribute("class", "row")
-        newCard.innerHTML = 
-        "<div class=\"row\">
-            <div class=\"col s12 m7\">
-              <div class=\"card\">
-                  <span class=\"card-title\">${Title}</span>
-                    <div class=\"card-image\">
-                      <img src=\"\">${Poster}</img>
-                    </div>
-              </div>
-              <div class="plotSummary">
-                  <p>${Plot}</p>
-              </div>
-            </div> 
-          </div>".ts
-                
-        document.getelementById("#moviedisplay2").appendChild("div");
+      var titleResponse = response.Title.
+          posterResponse = Response.Poster;
+          ratedResponse = Response.Rated;
+          ratingsResponse = Response.Ratings[{Source:1}].Value;
+          runtimeResponse = Response.Runtime;
+          genreResponse = Response.Genre;
+          directorResponse = Response.Director;
+          plotResponse = Response.Plot;
+          console.log(posterResponse, ratedResponse, runtimeResponse, genreResponse, directorResponse, plotResponse);
 
-
+      var newCard = document.createElement("div")
+          document.body.appendChild(newCard);
+          newCard.setAttribute("class", "row")
+          newCard.innerHTML = 
+              "<div class=row card-large>" +
+                "<div class=col s12 m7>" +
+                  "<div>" +
+                      `<span class=h1 card-title>${titleResponse}</span>` +
+                        "<div class=card-image>" +
+                          `<img src="/">${posterResponse}</img>` +
+                        "</div>" +
+                  "</div>" +
+                  "<div class='card-content'>" +
+                      `<p>${plotResponse}</p>` +
+                  "</div>" +              
+                "</div> " +
+              "</div>"
+          
     });    
   
+   
+        
 }
 
 
@@ -71,42 +62,3 @@ $("#searchBtn").click(function (){
   $("#movieDisplay2").css("display", "block"); 
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // When the user clicks the button, open the modal 
-// btn.onclick = function() {
-//   modal.style.display = "block";
-//   console.log(userInput);
-// }
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
-
-
-
-
-
-// k_uc3lp775
-
-
-
