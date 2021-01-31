@@ -1,3 +1,5 @@
+// loadDoc()
+
 // // Get the modal
 // var modal = document.getElementById("myModal");
 
@@ -14,13 +16,15 @@ function userInput(){
   var inputVal = document.getElementById("userInput").value;
    
     $.ajax({ 
-      url: "https://imdb-api.com/en/API/SearchTitle/k_uc3lp775/" + inputVal,
-      method: 'GET',
+      'url': "https://imdb-api.com/en/API/SearchMovie/k_uc3lp775/" + inputVal,
+      'method': 'GET',
+      'timeout': 0,
     }).then(function(response) {
-      console.log(response.results);
       console.log(response);
-      if (response.results) {
-        Array(0) > 1,
+      
+
+      if (response) {
+        [0] > 1,
         console.log('Too many results, please be more specific');
       }
     });    
@@ -36,6 +40,10 @@ $("#userInput").keypress(function(e){
   }
 })
 
+
+// function d {
+
+// }
 
 
 // k_uc3lp775

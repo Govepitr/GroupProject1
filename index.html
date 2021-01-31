@@ -16,26 +16,30 @@
   </head>
   <body>
     <!--movie title to be displayed here-->
-    <div class="container">
+    <div class="pageLoad hide">
       <h1 id="movieTitle">Cinema Search</h1>
       <!--search field-->
-      <input id="userInput" type="text" placeholder="Please enter ghfkwlhg"></input>
+      <input id="userInput" type="text" placeholder="Enter a favorite movie, actor, or show"></input>
 
+      <!--search button with built in onclick function that will change content once a successful search is performed-->
       <button id="searchBtn" onclick="userInput();">Search</button>
 
-      <!-- The Modal -->
+      <!-- The error modal -->
       <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
           <span class="close">&times;</span>
           <div class="modal-body">
-            <p id="error">Please enter an actual title.</p>
+            <p id="error"></p>
           </div>
         </div>
       </div>
 
       <!--displays movie details-->
-      <div class="movieDisplay"></div>
+      <div id="movieDisplay" class="show">
+        <input id="userInput" type="text" placeholder="Enter a favorite movie, actor, or show"></input>
+        <button id="searchBtn" onclick="userInput();">Search</button>
+      </div>
     </div>
   </body>
   <script src="./Assets/JS/script.js"></script>
