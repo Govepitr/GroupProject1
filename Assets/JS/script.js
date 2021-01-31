@@ -17,21 +17,44 @@ function userInput(){
   var inputVal = document.getElementById("userInput").value;
    
     $.ajax({ 
-      'url': "https://imdb-api.com/en/API/SearchMovie/k_uc3lp775/" + inputVal,
+      'url': "http://www.omdbapi.com/?apikey=3171b37b&t=" + inputVal,
       'method': 'GET',
       'timeout': 0,
     }).then(function(response) {
-      console.log(response);
+      console.log(response, [0]);
+      console.log(response, "Title");
+      console.log(response, "Poster");
+      console.log(response, "Plot");
+      console.log(response, [0]);
+      // console.log(response);
+      // console.log(response);
+      // console.log(response);
+      // console.log(response);
       
+      
+      var newCard = document.createNewElement("div")
+  
+        newCard.setAttribute("class", "row")
+        newCard.innerHTML = 
+        "<div class=\"row\">
+            <div class=\"col s12 m7\">
+              <div class=\"card\">
+                  <span class=\"card-title\">${Title}</span>
+                    <div class=\"card-image\">
+                      <img src=\"\">${Poster}</img>
+                    </div>
+              </div>
+              <div class="plotSummary">
+                  <p>${Plot}</p>
+              </div>
+            </div> 
+          </div>".ts
+                
+        document.getelementById("#moviedisplay2").appendChild("div");
 
-      if (response) {
-        [0] > 1,
-        console.log('Too many results, please be more specific');
-      }
+
     });    
   
-  // Displaying the value
-  console.log(inputVal);
 }
 
 
@@ -41,13 +64,24 @@ $("#userInput").keypress(function(e){
   }
 })
 
-var button = userInput();  
+ 
 
 $("#searchBtn").click(function (){
   $("#movieDisplay1").css("display", "none");
   $("#movieDisplay2").css("display", "block"); 
 
 })
+
+
+
+
+
+
+
+
+
+
+
 
 
 // // When the user clicks the button, open the modal 
@@ -69,12 +103,10 @@ $("#searchBtn").click(function (){
 // }
 
 
-// function d {
 
-// }
 
 
 // k_uc3lp775
 
-// search();
+
 

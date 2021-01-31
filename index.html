@@ -28,16 +28,19 @@
       </h1>
 
       <!--search button with built in onclick function that will change content once a successful search is performed and vanish once the search has begun-->
-      <div id="movieDisplay1" class="row center-align">
-        <input id="userInput" type="text" class="col s10" placeholder="Enter a movie or show">
-          <button class="small material-icons col s2 btn-floating pulse indigo darken-4" id="searchBtn" onclick="userInput();">search</button>
+      <div id="movieDisplay1" class="row">
+        <div class="col l8 m10 s10">
+          <input id="userInput" type="text" placeholder="Enter a movie or show">
+        </div>
+        <div class="col l4 m2 s2">
+          <button class="small material-icons btn-floating pulse indigo darken-4" id="searchBtn" onclick="userInput();">search</button>
+        </div>
       </div>
-    </div>
     <!--Section that appears and displays content once search returns results-->
     
     <div id="movieDisplay2" >
       <h1>testing</h1>
-      <input id="userInput" type="text" placeholder="Enter a movie or show">
+      <input id="userInput2" type="text" placeholder="Enter a movie or show">
         <button id="contBtn" onclick="userInput();">search</button>
       </input>
     </div>
