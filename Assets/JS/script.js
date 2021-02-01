@@ -1,6 +1,4 @@
 
-
-
 function userInput(){
   // Selecting the input element and get its value 
   var inputVal = document.getElementById("userInput").value;
@@ -29,15 +27,15 @@ function userInput(){
               `<img src="${posterResponse}">` +
             "</div>" +
             "<div class=card-content>" +
-              '<span>${titleResponse}</span>' +
-              '<p></p>'  +
-              '<p>${runtimeResponse}</p>' +
-              '<p>${directorResponse}</p>' +
-              '<p>${genreResponse}</p>' +
+              `<span>${titleResponse}</span>` +
+              `<p></p>`  +
+              `<p>${runtimeResponse}</p>` +
+              `<p>${directorResponse}</p>` +
+              `<p>${genreResponse}</p>` +
             "</div>" +
             "<div class=card-reveal>" +
-              '<span>${ratingsResponse[1]}</span>' +
-              '<p id=#plotSpot class=flow-text></p>' +
+              `<span>${ratingsResponse[1]}</span>` +
+              `<p id=#plotSpot class=flow-text></p>` +
             "</div>" +
           "</div>"
               document.body.appendChild(newCard);              
@@ -46,7 +44,7 @@ function userInput(){
     function clearFunction() {
       document.getElementById("searchBtn2").reset();
     }
-   
+   clearFunction();
         
 }
 
