@@ -14,7 +14,7 @@ function userInput(){
       var titleResponse = response.Title,
           posterResponse = response.Poster,
           ratedResponse = response.Rated,
-          ratingsResponse = response.Ratings[1].Value || "Sorry, your ratings are in another castle!",
+          ratingsResponse = response.Ratings[0].Value || "Sorry, your ratings are in another castle!",
           runtimeResponse = response.Runtime,
           genreResponse = response.Genre,
           directorResponse = response.Director,
@@ -30,7 +30,7 @@ function userInput(){
             "</div>" +
             "<div class=card-content>" +
               '<span>${titleResponse}</span>' +
-              '<p>"This is text"</p>'  +
+              '<p></p>'  +
               '<p>${runtimeResponse}</p>' +
               '<p>${directorResponse}</p>' +
               '<p>${genreResponse}</p>' +
