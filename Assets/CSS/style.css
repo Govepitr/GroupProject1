@@ -1,17 +1,6 @@
-* {
-  background-color: var(--primary-color-light);
-}
-
 h1 {
   font-family: 'Londrina Solid';
   font-size: 9vh;
-  font: #381697;
-  /* font: var(--primary-color-dark)  */
-}
-
-#text {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* font: var(--primary-color-dark) */
 }
 
 .container {
@@ -20,13 +9,6 @@ h1 {
   justify-content: center;
   align-items: center;
   align-content: center;
-}
-
-:root {
-  --primary-color-dark: #0d47a1;
-  --primary-color-light: #e3f2fd;
-  --secondary-color-dark: #2196f3;
-  --secondary-color-light: #bbdefb;
 }
 
 /* The Modal(background) */

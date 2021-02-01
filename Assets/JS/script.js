@@ -41,6 +41,9 @@ $("#userInput").keypress(function(e){
   }
 })
 
+$(document).ready(function(){
+  $('.parallax').parallax();
+});
 
 // function d {
 
