@@ -19,32 +19,31 @@ function userInput(){
           plotResponse = response.Plot;
           console.log(titleResponse, posterResponse, ratedResponse, ratingsResponse, runtimeResponse, genreResponse, directorResponse, plotResponse);
 
-      var newCard = document.createElement("div")
-          newCard.setAttribute("class", "row")
+      var newCard = document.createElement("div")          
           newCard.innerHTML = 
-          "<div class=center-align card>" +
-            "<div class=card-image waves-effect waves-block waves-light>" +
-              `<img src="${posterResponse}">` +
-            "</div>" +
-            "<div class=card-content>" +
-              `<span>${titleResponse}</span>` +
-              `<p></p>`  +
-              `<p>${runtimeResponse}</p>` +
-              `<p>${directorResponse}</p>` +
-              `<p>${genreResponse}</p>` +
-            "</div>" +
-            "<div class=card-reveal>" +
-              `<span>${ratingsResponse[1]}</span>` +
-              `<p id=#plotSpot class=flow-text></p>` +
-            "</div>" +
-          "</div>"
-              document.body.appendChild(newCard);              
+          `<div class="center-align card"> 
+              <div class="card-image activator waves-effect waves-block waves-light"> 
+                <img src="${posterResponse}">
+              </div>` +
+            `<div class="card-content">
+              <span class="card-title activator blue-text text-darken-4">${titleResponse}</span>
+            </div>` +
+            `<div class="card-reveal">
+              <span class="card-title blue-text text-darken-4">
+                <p>${directorResponse}</p>
+                <p>${ratedResponse}</p>
+                <p>${runtimeResponse}</p>
+                <p>${ratingsResponse[1]}</p>
+                <p>${runtimeResponse}</p>
+              </span>
+              <p>${plotResponse}</p>
+            </div>
+          </div>` 
+        document.getElementById("movieDisplay2").appendChild(newCard);
               
     });
-    function clearFunction() {
-      document.getElementById("searchBtn2").reset();
-    }
-   clearFunction();
+    
+
         
 }
 
