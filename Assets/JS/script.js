@@ -25,7 +25,6 @@ function userInput(){
           console.log(posterResponse, ratedResponse, ratingsResponse, runtimeResponse, genreResponse, directorResponse, plotResponse);
 
       var newCard = document.createElement("div")
-          document.body.appendChild(newCard);
           newCard.setAttribute("class", "row")
           newCard.innerHTML = 
               "<div class=row card-large>" +
@@ -41,7 +40,7 @@ function userInput(){
                   "</div>" +              
                 "</div> " +
               "</div>"
-          
+              document.body.appendChild(newCard);
     });    
   
    
