@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="./Assets/CSS/style.css" />
 </head>
 <body>
-  <!--movie title to be displayed here-->
+  <!--Application title to be displayed here-->
   <div class="container center-align">
     <div class="title">
       <h1>
@@ -30,25 +30,41 @@
       <!--search button with built in onclick function that will change content once a successful search is performed and vanish once the search has begun-->
       <div id="movieDisplay1" class="row">
         <div class="col l8 m10 s10">
-          <input id="userInput" type="text" placeholder="Enter a movie or show">
+          <input class="center-align" id="userInput" type="text" placeholder="Enter a movie or show">
         </div>
         <div class="col l4 m2 s2">
-          <button class="small material-icons btn-floating pulse indigo darken-4" id="searchBtn" onclick="userInput();">search</button>
+          <button class="small material-icons btn-floating pulse indigo darken-4 hoverable" id="searchBtn" onclick="userInput();">search</button>
         </div>
       </div>
+      
+      <!--Card that displays desired paremeters based on user input-->
+      <div id="movieDisplay2" class="center-align card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="responsive-img" src="">
+        </div>
+      <div  class="row card-content">
+        <div class="col l8 m10 s10">
+          <input class="center-align" id="userInput" type="text" placeholder="Enter a movie or show">
+        </div>
+      </div>
+      <div class="col l4 m2 s2">
+        <button class="small material-icons btn-floating pulse indigo darken-4 hoverable" id="searchBtn" onclick="userInput();">search</button>
+      </div>
+      <div>
+        <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+        <p id="plotSpot" class="row">Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop Ragnarök, the destruction of his world, at the hands of the powerful and ruthless villain Hela.</p>
+        <p class="row"></p>
+        <p class="row"></p>
+        <p class="row"></p> 
+            <p></p>
+          </div>
+        </div>
 
-    <!--Section that appears and displays content once search returns results-->    
-    <div id="movieDisplay2">
-      <input id="userInput2" type="text" placeholder="Enter a movie or show">
-        <button id="contBtn" onclick="userInput();">search</button>
-    </div>
-
-    <!-- The Modal -->
-
-    
-    
   </div>
+  <script src="./Assets/JS/script.js"></script>
 </body>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<script src="./Assets/JS/script.js"></script>
+
 </html>
