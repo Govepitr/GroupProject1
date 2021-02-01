@@ -14,15 +14,15 @@ function userInput(){
       'method': 'GET',
       'timeout': 0,
     }).then(function(response) {
-      var titleResponse = response.Title.
-          posterResponse = Response.Poster;
-          ratedResponse = Response.Rated;
-          ratingsResponse = Response.Ratings[{Source:1}].Value;
-          runtimeResponse = Response.Runtime;
-          genreResponse = Response.Genre;
-          directorResponse = Response.Director;
-          plotResponse = Response.Plot;
-          console.log(posterResponse, ratedResponse, runtimeResponse, genreResponse, directorResponse, plotResponse);
+      var titleResponse = response.Title,
+          posterResponse = response.Poster,
+          ratedResponse = response.Rated,
+          ratingsResponse = response.Ratings[1].Value,
+          runtimeResponse = response.Runtime,
+          genreResponse = response.Genre,
+          directorResponse = response.Director,
+          plotResponse = response.Plot;
+          console.log(posterResponse, ratedResponse, ratingsResponse, runtimeResponse, genreResponse, directorResponse, plotResponse);
 
       var newCard = document.createElement("div")
           document.body.appendChild(newCard);
