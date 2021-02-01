@@ -14,7 +14,7 @@ function userInput(){
       var titleResponse = response.Title,
           posterResponse = response.Poster,
           ratedResponse = response.Rated,
-          ratingsResponse = response.Ratings[0].Value || "Sorry, your ratings are in another castle!",
+          ratingsResponse = response.Ratings[0].Value || response.Ratings[0].Value("Sorry, your ratings are in another castle!"),
           runtimeResponse = response.Runtime,
           genreResponse = response.Genre,
           directorResponse = response.Director,
@@ -37,16 +37,19 @@ function userInput(){
             "</div>" +
             "<div class=card-reveal>" +
               '<span>${ratingsResponse[1]}</span>' +
-              '<p id=#plotSpot class=flow-text>${plotResponse}</p>' +
+              '<p id=#plotSpot class=flow-text></p>' +
             "</div>" +
           "</div>"
               document.body.appendChild(newCard);              
               
-    });    
-    document.getElementById("userInput").value = "";
+    });
+    function clearFunction() {
+      document.getElementById("searchBtn2").reset();
+    }
    
         
 }
+
 
 
 $("#userInput").keypress(function(e){
@@ -57,7 +60,7 @@ $("#userInput").keypress(function(e){
 
  
 
-$("#searchBtn").click(function (){
+$("#searchBtn1").click(function (){
   $("#movieDisplay1").css("display", "none");
   $("#movieDisplay2").css("display", "block"); 
 
