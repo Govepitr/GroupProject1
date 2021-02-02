@@ -12,7 +12,7 @@ $("#userInput").click(function() {
 $("#searchBtn").click(function() {
 
       // Selecting the input element and get its value 
-      var inputVal = document.getElementById("userInput").value;      
+      var inputVal = document.getElementById("userInput").value;
       
         $.ajax({ 
           'url': "http://www.omdbapi.com/?apikey=3171b37b&t=" + inputVal,
@@ -38,19 +38,24 @@ $("#searchBtn").click(function() {
                   <img src="${posterResponse}">
                 </div>` +
               `<div class="card-content">
-            <span class="card-title activator blue-text text-darken-4">${titleResponse}<i class="material-icons right">close</i></span>
+            <span class="card-title activator blue-text text-darken-4">${titleResponse}<i class="material-icons right">more_vert</i></span>
               </div>` +
-              `<div class="card-reveal"><span class="card-title blue-text text-darken-4">
-                  <p>Director: ${directorResponse}</p>
+              `<div class="card-reveal">
+                <div class="card-title blue-text text-darken-4">
+                  <p>Director: ${directorResponse}<i class="material-icons right activator">cancel</i></p>
                   <p>${ratedResponse}</p>
                   <p>${runtimeResponse}</p>
                   <p>Ratings: ${ratingsResponse}</p>
                   <p>${genreResponse}</p>
                   <p class="line">____________________</P>
                   <p>${plotResponse}</p>
+                </div>
               </div>
             </div>` ;
         document.getElementById("userInput").value = ""    
         });
+function myFunction() {
+  document.getElementById("modal1").innerHTML = "modal-trigger"
+}
 
 });

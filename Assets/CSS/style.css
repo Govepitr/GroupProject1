@@ -1,8 +1,6 @@
 
 
-* {
-  background-color: var(--primary-color-light);
-}
+
 h1 {
   font-family: 'Londrina Solid';
   font-size: 9vh;
@@ -21,18 +19,3 @@ h1 {
 #userInput {
   width: fit-content;
 }
-
-/* The Close Button */
-.close {
-  color: #AAAAAA;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
