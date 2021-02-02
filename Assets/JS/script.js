@@ -58,9 +58,14 @@ $("#searchBtn").click(function() {
 
 }); 
 
+const proxyurl = "https://agile-forest-93683.herokuapp.com/";
+const url = "https://icanhazdadjoke.com/";
+
 var dadBtn = document.querySelectorAll("dadSearch");
   dadBtn.onclick = (function() {
-    fetch('https://icanhazdadjoke.com')
-    .then(response => response.json())
-    .then(data => console.log(data));
+    fetch(proxyurl + url)    
+      .then(reponse => response.text())
+      .then(contents =>console.log(contents))
+      .catch(() => console.log("Can't access " + url + " response. Blocked by browser?"))
+    
 });
