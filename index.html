@@ -20,32 +20,34 @@
 </head>
 
 <body>
-  <!--App/Movie title to be displayed here-->
-  <div class="container center-align">
-    <div class="title">
-      <h1 id="movieTitle">
-        <span class="blue-text text-darken-4 show">
-          Cinema Search
-        </span>
-      </h1>
+  <div class="hero flex-center">
+    <!--App/Movie title to be displayed here-->
+    <div class="container center-align">
+      <!-- <div class="parallax"><img src="./Assets/images/img/jpg"></div> -->
+      <div class="title">
+        <h1 id="movieTitle">
+          <span class="blue-text text-darken-4 show">
+            Cinema Search
+          </span>
+        </h1>
 
-      <!--search button with built in onclick function that will change content once a successful search is performed-->
-      <div id="movieDisplay" class="row">
-        <div class="col l8 m10 s10">
-          <input class="center-align" id="userInput" type="text" placeholder="Enter a movie or show">
+        <!--search button with built in onclick function that will change content once a successful search is performed-->
+        <div id="movieDisplay" class="row">
+          <div class="col l8 m10 s10">
+            <input class="center-align" id="userInput" type="text" placeholder="Enter a movie or show">
+          </div>
+          <div class="col l4 m2 s2">
+            <button class="small material-icons btn-floating pulse indigo darken-4 waves-effect waves-indigo"
+              id="searchBtn" onclick="userInput();">Search</button>
+          </div>
         </div>
-        <div class="col l4 m2 s2">
-          <button class="small material-icons btn-floating pulse indigo darken-4 waves-effect waves-indigo"
-            id="searchBtn" onclick="userInput();">Search</button>
-        </div>
+
+        <!-- Card that displays parameters based on user input -->
+        <card id="movieDisplay2"></card>
       </div>
 
-      <!-- Card that displays parameters based on user input -->
-      <card id="movieDisplay2"></card>
     </div>
-
-  </div>
-  <script src="./Assets/JS/script.js"></script>
+    <script src="./Assets/JS/script.js"></script>
 </body>
 
 </html>
