@@ -54,8 +54,14 @@ $("#searchBtn").click(function() {
             </div>` ;
         document.getElementById("userInput").value = ""    
         });
-function myFunction() {
-  document.getElementById("modal1").innerHTML = "modal-trigger"
-}
 
+
+});
+
+
+var dadBtn = document.querySelectorAll("dadSearch");
+  dadBtn.onclick = (function() {
+    fetch('https://icanhazdadjoke.com')
+    .then(response => response.json())
+    .then(data => console.log(data));
 });
