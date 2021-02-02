@@ -57,8 +57,6 @@ $("#searchBtn").click(function() {
 
 
 }); 
-
-
 var dadBtn = document.querySelectorAll("dadSearch");
   dadBtn.onclick = (function() {
     fetch('https://icanhazdadjoke.com')
