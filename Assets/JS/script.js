@@ -56,7 +56,7 @@ $("#searchBtn").click(function() {
         });
 
 
-});
+}); 
 
 
 var dadBtn = document.querySelectorAll("dadSearch");
