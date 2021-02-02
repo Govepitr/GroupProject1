@@ -29,6 +29,10 @@ $("#searchBtn").click(function() {
               plotResponse = response.Plot;
               console.log(titleResponse, posterResponse, ratedResponse, ratingsResponse, runtimeResponse, genreResponse, directorResponse, plotResponse);
 
+              var totalCard = titleResponse, posterResponse, ratedResponse, ratingsResponse, runtimeResponse, genreResponse, directorResponse, plotResponse;
+
+
+
 
 
 
@@ -54,18 +58,22 @@ $("#searchBtn").click(function() {
             </div>` ;
         document.getElementById("userInput").value = ""    
         });
-
-
+        
 }); 
 
-const proxyurl = "https://agile-forest-93683.herokuapp.com/";
-const url = "https://icanhazdadjoke.com/";
+        // var hoardBtn = localStorage.setItem(totalCard)
+        // var timeStoneBtn = localStorage.getvalue('')
 
-var dadBtn = document.querySelectorAll("dadSearch");
-  dadBtn.onclick = (function() {
-    fetch(proxyurl + url)    
-      .then(reponse => response.text())
-      .then(contents =>console.log(contents))
-      .catch(() => console.log("Can't access " + url + " response. Blocked by browser?"))
-    
-});
+        $('#dadSearch').click(function(){          
+            fetch("https://icanhazdadjoke.com/", {
+              headers: {
+              Accept: "application/json"
+              }
+            })
+            .then(response => response.json())
+            .then(data => console.log(data.joke));
+
+              
+          });
+
+
