@@ -1,3 +1,30 @@
+//---Pardon our dust!!
+
+// var jokePick = [];
+// var totalCard;
+
+//local storage functions
+// initTotalCardList();
+// initJoke();
+
+// function renderJoke(){
+//   $("#storedJokes").val("");
+
+//   for (i=0; i<jokePick.length; i++){
+//     var p = $("<p>");
+//     p.text(jokePick);
+//     $("#jokePick").after(p);
+//     debugger
+//   }
+// }
+
+// function initJoke() {
+//   var storedJokes = JSON.parse(localStorage.getItem("jokeData"));
+  
+//   if (storedJokes !== null)  {
+//     jokePick = storedJokes;
+//   }
+// }
 
 
 $("#userInput").click(function() {
@@ -28,9 +55,19 @@ $("#searchBtn").click(function() {
               directorResponse = response.Director,
               plotResponse = response.Plot;
               console.log(titleResponse, posterResponse, ratedResponse, ratingsResponse, runtimeResponse, genreResponse, directorResponse, plotResponse);
+              
+              //--Coming soon to a project near you!!
 
-              var totalCard = titleResponse, posterResponse, ratedResponse, ratingsResponse, runtimeResponse, genreResponse, directorResponse, plotResponse;
+              // var totalCard = titleResponse, posterResponse, ratedResponse, ratingsResponse, runtimeResponse, genreResponse, directorResponse, plotResponse;
+ 
+// function  storeMovieArray(){
 
+//   localStorage.setItem("card", JSON.stringify(totalCard));
+// }
+
+// $("#timeStone").on("click", function(event){
+//   event.preventDefault();
+// })
 
 
 
@@ -60,20 +97,19 @@ $("#searchBtn").click(function() {
         });
         
 }); 
-
+        
         // var hoardBtn = localStorage.setItem(totalCard)
         // var timeStoneBtn = localStorage.getvalue('')
-
+        
         $('#dadSearch').click(function(){
-            fetch("https://icanhazdadjoke.com/", {
-              headers: {
+          fetch("https://icanhazdadjoke.com/", {
+            headers: {
               Accept: "application/json"
-              }
-            })
-            .then(response => response.json())
-            .then(data => console.log(data.joke));
-
-              
-          });
-
-
+            }
+          })
+          .then(response => response.json())
+          .then(data =>console.log(data.joke));
+        
+        });
+        
+                    
