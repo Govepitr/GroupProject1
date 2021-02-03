@@ -64,14 +64,15 @@ $("#searchBtn").click(function() {
         // var hoardBtn = localStorage.setItem(totalCard)
         // var timeStoneBtn = localStorage.getvalue('')
 
-        $('#dadSearch').click(function(){          
+        $('#dadSearch').click(function(){
+          var jokeSpot = document.getElementById("#jokeSpot")
             fetch("https://icanhazdadjoke.com/", {
               headers: {
               Accept: "application/json"
               }
             })
             .then(response => response.json())
-            .then(data => console.log(data.joke));
+            .then(data => (data.joke).insertAdjacentElement("#jokeSpot"));
 
               
           });
