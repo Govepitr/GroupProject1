@@ -65,14 +65,13 @@ $("#searchBtn").click(function() {
         // var timeStoneBtn = localStorage.getvalue('')
 
         $('#dadSearch').click(function(){
-          var jokeSpot = document.getElementById("#jokeSpot")
             fetch("https://icanhazdadjoke.com/", {
               headers: {
               Accept: "application/json"
               }
             })
             .then(response => response.json())
-            .then(data => (data.joke).insertAdjacentElement("#jokeSpot"));
+            .then(data => console.log(data.joke));
 
               
           });
