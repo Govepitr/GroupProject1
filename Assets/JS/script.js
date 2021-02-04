@@ -29,7 +29,11 @@
 $("#userInput").keyup(function (event) {
   if (event.keyCode === 13) {
     $("#searchBtn").click();
-  };
+  }
+})
+
+$(document).ready(function(){
+  $('.parallax').parallax();
 });
 
 $("#searchBtn").click(function () {
