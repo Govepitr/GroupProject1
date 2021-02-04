@@ -26,6 +26,7 @@ h1 {
 
 #userInput {
   width: fit-content;
+  color: #AAAAAA;
 }
 
 /* The Close Button */
@@ -44,5 +45,5 @@ h1 {
 
 #text {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* font: var(--primary-color-dark) */
+  color: antiquewhite;
 }
