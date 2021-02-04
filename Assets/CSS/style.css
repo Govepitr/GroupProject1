@@ -12,7 +12,7 @@ h1 {
 }
 
 .hero::before {
-  background-image: url(../image/img.jpg);
+  background-image: url(../images/img.jpg);
   background-size: cover;
   content: "";
   display: block;
@@ -25,7 +25,7 @@ h1 {
   opacity: 0.4;
 }
 
-.hero::before {
+/* .hero::before {
   background-image: url(../images/img.jpg);
   background-size: cover;
   content: "";
@@ -37,7 +37,7 @@ h1 {
   height: 100%;
   z-index: -2;
   opacity: 0.8;
-}
+} */
 
 #userInput {
   width: fit-content;
@@ -51,6 +51,7 @@ h1 {
   font-size: 28px;
   font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
   color: #000;
