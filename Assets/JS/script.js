@@ -1,3 +1,5 @@
+//begin working code written by Dan 
+
 $("#userInput").click(function() {
   $("#userInput").keyup(function(event){
     if(event.keyCode === 13) {
@@ -44,19 +46,30 @@ $("#searchBtn").click(function() {
             </div>` ;
         document.getElementById("userInput").value = ""    
         });
-        $('#randoP').click(function(){ 
-            fetch("https://api.themoviedb.org?api_key=4e8eccd4159c538edb2e88a2a37f0695", inputVal, { 
-            headers: {
-            Accept: "application/json"
-            }
-          })
-          .then(function(response) {
-            return response.json();
-          }).then(function(response){
-            console.log(response);
-          })
-        });
 }); 
+
+//end working code written by Dan 
+
+
+
+
+
+        // $('#randoP').click(function(){ 
+        //     fetch("https://api.themoviedb.org?api_key=4e8eccd4159c538edb2e88a2a37f0695", inputVal, { 
+        //     headers: {
+        //     Accept: "application/json"
+        //     }
+        //   })
+        //   .then(function(response) {
+        //     return response.json();
+        //   }).then(function(response){
+        //     console.log(response);
+        //   })
+        // });
+
+
+
+
         // var hoardBtn = localStorage.setItem(totalCard)
         // var timeStoneBtn = localStorage.getvalue('')
         // $('#dadSearch').click(function(){
