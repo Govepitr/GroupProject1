@@ -1,30 +1,30 @@
 //---Pardon our dust!!
 
-// var jokePick = [];
-// var totalCard;
+var jokePick = [];
+var totalCard;
 
-//local storage functions
-// initTotalCardList();
-// initJoke();
+local storage functions
+initTotalCardList();
+initJoke();
 
-// function renderJoke(){
-//   $("#storedJokes").val("");
+function renderJoke(){
+  $("#storedJokes").val("");
 
-//   for (i=0; i<jokePick.length; i++){
-//     var p = $("<p>");
-//     p.text(jokePick);
-//     $("#jokePick").after(p);
-//     debugger
-//   }
-// }
+  for (i=0; i<jokePick.length; i++){
+    var p = $("<p>");
+    p.text(jokePick);
+    $("#jokePick").after(p);
+    debugger
+  }
+}
 
-// function initJoke() {
-//   var storedJokes = JSON.parse(localStorage.getItem("jokeData"));
+function initJoke() {
+  var storedJokes = JSON.parse(localStorage.getItem("jokeData"));
 
-//   if (storedJokes !== null)  {
-//     jokePick = storedJokes;
-//   }
-// }
+  if (storedJokes !== null)  {
+    jokePick = storedJokes;
+  }
+}
 
 $("#userInput").keyup(function (event) {
   if (event.keyCode === 13) {
