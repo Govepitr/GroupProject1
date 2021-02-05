@@ -18,21 +18,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
    <!-- Materialize CDN-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-   <link rel="stylesheet" href="./Assets/CSS/style.css" />
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+   <link rel="stylesheet" href="./Assets/CSS/style.css" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
-  <div class="hero flex-center">
+  <header id="jokes">
+    <h5 class="dadJokes"></h5>
+  </header>
+  <div class="hero">
     <!--Application title to be displayed here-->
     <div class="container center-align">
       <div class="title">
-        <h1 id="movieTitle" class="animate__animated animate__heartBeat animate__repeat-2 animate__slow	2s">
+        <h1 id="movieTitle" class="animate__animated">
           <span class="grey-text text-lighten-3 show">
             Cinema Search
           </span>
         </h1>
-        <!--search button that will change content once a successful search is performed and vanish once the search has begun-->
+        <!--search button function that will change content once a successful search is performed and vanish once the search has begun-->
         <div id="movieDisplay1" class="row">
           <div class="col l8 m10 s10">
             <input class="center-align" id="userInput" type="text" placeholder="Enter a movie or show">

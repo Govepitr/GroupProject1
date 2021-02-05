@@ -1,30 +1,30 @@
 //---Pardon our dust!!
 
-var jokePick = [];
-var totalCard;
+// var jokePick = [];
+// var totalCard;
 
-local storage functions
-initTotalCardList();
-initJoke();
+//local storage functions
+// initTotalCardList();
+// initJoke();
 
-function renderJoke(){
-  $("#storedJokes").val("");
+// function renderJoke(){
+//   $("#storedJokes").val("");
 
-  for (i=0; i<jokePick.length; i++){
-    var p = $("<p>");
-    p.text(jokePick);
-    $("#jokePick").after(p);
-    debugger
-  }
-}
+//   for (i=0; i<jokePick.length; i++){
+//     var p = $("<p>");
+//     p.text(jokePick);
+//     $("#jokePick").after(p);
+//     debugger
+//   }
+// }
 
-function initJoke() {
-  var storedJokes = JSON.parse(localStorage.getItem("jokeData"));
+// function initJoke() {
+//   var storedJokes = JSON.parse(localStorage.getItem("jokeData"));
 
-  if (storedJokes !== null)  {
-    jokePick = storedJokes;
-  }
-}
+//   if (storedJokes !== null)  {
+//     jokePick = storedJokes;
+//   }
+// }
 
 $("#userInput").keyup(function (event) {
   if (event.keyCode === 13) {
@@ -32,9 +32,7 @@ $("#userInput").keyup(function (event) {
   }
 })
 
-$(document).ready(function(){
-  $('.parallax').parallax();
-});
+
 
 $("#searchBtn").click(function () {
 
@@ -54,6 +52,7 @@ $("#searchBtn").click(function () {
 
   // Selecting the input element and get its value 
   var inputVal = document.getElementById("userInput").value;
+  var pureVal = inputVal;
 
   $.ajax({
     'url': "http://www.omdbapi.com/?apikey=3171b37b&t=" + inputVal,
@@ -63,7 +62,7 @@ $("#searchBtn").click(function () {
     var titleResponse = response.Title,
       posterResponse = response.Poster,
       ratedResponse = response.Rated,
-      ratingsResponse = response.Ratings[1].Value || response.Ratings[1].Value("Sorry, your ratings are in another castle!"),
+      ratingsResponse = response.Ratings[1].Value || response.Ratings[0].Value,
       runtimeResponse = response.Runtime,
       genreResponse = response.Genre,
       directorResponse = response.Director,
@@ -117,11 +116,18 @@ $("#searchBtn").click(function () {
 
 $('#dadSearch').click(function () {
   fetch("https://icanhazdadjoke.com/", {
+    method: 'post',
     headers: {
       Accept: "application/json"
     }
-  })
-    .then(response => response.json())
-    .then(data => console.log(data.joke));
+  }),
+  //  body: JSON.stringify(content)
+
+    
+    
+
+    
+  // })
+    
 
 });
