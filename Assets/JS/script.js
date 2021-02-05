@@ -55,7 +55,7 @@ $("#searchBtn").click(function () {
   var pureVal = inputVal;
 
   $.ajax({
-    'url': "http://www.omdbapi.com/?apikey=3171b37b&t=" + inputVal,
+    'url': "https://www.omdbapi.com/?apikey=3171b37b&t=" + inputVal,
     'method': 'GET',
     'timeout': 0,
   }).then(function (response) {
@@ -116,18 +116,16 @@ $("#searchBtn").click(function () {
 
 $('#dadSearch').click(function () {
   fetch("https://icanhazdadjoke.com/", {
-    method: 'post',
     headers: {
       Accept: "application/json"
     }
-  }),
-  //  body: JSON.stringify(content)
+  }).then(response => response.json())
+  .then(function(data) {
+   console.log(data.joke);
+   document.getElementById("dadJokes").innerText = data.joke;
+})
+       
 
-    
-    
-
-    
-  // })
     
 
 });
