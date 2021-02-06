@@ -1,4 +1,4 @@
-//begin working code written by Dan 
+
 
 $("#userInput").click(function() {
   $("#userInput").keyup(function(event){
@@ -47,11 +47,7 @@ $("#searchBtn").click(function() {
         document.getElementById("userInput").value = ""    
         });
 }); 
-
-//end working code written by Dan 
-
-
-     
+     //joke API
         $('#joker').click(function(){
             fetch("https://official-joke-api.appspot.com/random_joke")
             .then(function(response) {
@@ -64,41 +60,22 @@ $("#searchBtn").click(function() {
               jokesContainerEl.innerHTML = '';
               var jokesContent = document.createElement("div");
               jokesContent.classList.add("hah")
-              jokesContent.innerHTML = `${response.setup}
-              ${response.punchline}`
+              jokesContent.innerHTML = `
+              <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="./Assets/images/cat.jpg">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"> ${response.setup}<i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">${response.punchline}<i class="material-icons right">close</i></span>
+                </div>
+              </div>`
               jokesContainerEl.appendChild(jokesContent);
             });
         });
 
 
 
-            //   response => response.json()
-            // .then(data = () => {
-            //   console.log(data.joke)
-            //   $("#p-id")
-            // }); 
-
-
-          
-
-            // "Accept: application/json"
-
-
-
-               // var hoardBtn = localStorage.setItem()
-        // var timeStoneBtn = localStorage.getvalue('')
-
-
-
-        // $('#randoP').click(function(){ 
-        //     fetch("https://api.themoviedb.org?api_key=4e8eccd4159c538edb2e88a2a37f0695", inputVal, { 
-        //     headers: {
-        //     Accept: "application/json"
-        //     }
-        //   })
-        //   .then(function(response) {
-        //     return response.json();
-        //   }).then(function(response){
-        //     console.log(response);
-        //   })
-        // });
+        
