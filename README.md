@@ -20,7 +20,7 @@ There are no steps to install. Please navigate to the deployed site using the li
 
 Navigate to the deployed page to view the site. When on the site enter a movie title and click search to see the movie poster, ratings, and a discription. 
 
-![Cinema Search Screenshot](https://github.com/Govepitr/GroupProject1/blob/main/assets/images/screenshot.png?raw=true "Cinema Search Screenshot")
+![Cinema Search Screenshot](https://github.com/Govepitr/GroupProject1/tree/main/assets/images/screenshot.png?raw=true "Cinema Search Screenshot")
 
 ## License: 
 
@@ -32,7 +32,7 @@ Dan Arbelo, George Bravo, and Katherine Lynn.
 
 ## Github deployed page: 
 
-[Github deployed page]()
+[Github deployed page](https://govepitr.github.io/GroupProject1/)
 
 ## Github repository: 
 
