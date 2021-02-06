@@ -28,11 +28,11 @@ $("#searchBtn").click(function() {
             `<div id="cardVanish" class="center-align card"> 
                 <div class="card-image activator waves-effect waves-block waves-light"> 
                   <img src="${posterResponse}">
-                </div>` +
-              `<div class="card-content">
+                </div>
+              <div class="card-content">
             <span class="card-title activator blue-text text-darken-4">${titleResponse}<i class="material-icons right">more_vert</i></span>
-              </div>` +
-              `<div class="card-reveal">
+              </div>
+              <div class="card-reveal">
                 <div class="card-title blue-text text-darken-4">
                   <p>Director: ${directorResponse}<i class="material-icons right activator">cancel</i></p>
                   <p>${ratedResponse}</p>
@@ -51,6 +51,42 @@ $("#searchBtn").click(function() {
 //end working code written by Dan 
 
 
+     
+        $('#joker').click(function(){
+            fetch("https://official-joke-api.appspot.com/random_joke")
+            .then(function(response) {
+              return response.json();
+                            
+            })
+            .then(function(response){
+              // console.log(response);
+              var jokesContainerEl = document.querySelector('#jokes');
+              jokesContainerEl.innerHTML = '';
+              var jokesContent = document.createElement("div");
+              jokesContent.classList.add("hah")
+              jokesContent.innerHTML = `${response.setup}
+              ${response.punchline}`
+              jokesContainerEl.appendChild(jokesContent);
+            });
+        });
+
+
+
+            //   response => response.json()
+            // .then(data = () => {
+            //   console.log(data.joke)
+            //   $("#p-id")
+            // }); 
+
+
+          
+
+            // "Accept: application/json"
+
+
+
+               // var hoardBtn = localStorage.setItem()
+        // var timeStoneBtn = localStorage.getvalue('')
 
 
 
@@ -66,32 +102,3 @@ $("#searchBtn").click(function() {
         //     console.log(response);
         //   })
         // });
-
-
-
-
-        // var hoardBtn = localStorage.setItem(totalCard)
-        // var timeStoneBtn = localStorage.getvalue('')
-        // $('#dadSearch').click(function(){
-        //     fetch("https://icanhazdadjoke.com/", {
-              // headers: {
-              // Accept: "application/json"
-              // }
-        //     })
-        //     .then(function(response) {
-        //       return response.json();
-        //     })
-        //     .then(function(response){
-        //       console.log(response.data['joke']);
-        //       var jokesContainerEl = document.querySelector('#jokes');
-        //       jokesContainerEl.innerHTML = '';
-        //       var jokesContent = document.createElement('hah');
-        //       jokesContent.setAttribute('hah', response.data['joke']);
-        //       jokesContainerEl.appendChild(jokesContent);
-        //     });
-        // });
-            //   response => response.json())
-            // .then(data = () => {
-            //   console.log(data.joke)
-            //   $("#p-id")
-            // } 
