@@ -1,36 +1,12 @@
-//---Pardon our dust!!
 
-// var jokePick = [];
-// var totalCard;
 
-//local storage functions
-// initTotalCardList();
-// initJoke();
 
-// function renderJoke(){
-//   $("#storedJokes").val("");
-
-//   for (i=0; i<jokePick.length; i++){
-//     var p = $("<p>");
-//     p.text(jokePick);
-//     $("#jokePick").after(p);
-//     debugger
-//   }
-// }
-
-// function initJoke() {
-//   var storedJokes = JSON.parse(localStorage.getItem("jokeData"));
-
-//   if (storedJokes !== null)  {
-//     jokePick = storedJokes;
-//   }
-// }
 
 $("#userInput").keyup(function (event) {
   if (event.keyCode === 13) {
     $("#searchBtn").click();
   }
-})
+});
 
 
 
@@ -41,6 +17,7 @@ $("#searchBtn").click(function () {
 });
 $("#userInput").click(function () {
 
+  // Allows pressing enter to serve same function as click
   $("#userInput").keyup(function (event) {
     if (event.keyCode === 13) {
       $("#searchBtn").click();
@@ -48,11 +25,16 @@ $("#userInput").click(function () {
   });
 });
 
+$(document).ready(function(){
+  $(".storeMovie").collapsible();
+});
+
+
 $("#searchBtn").click(function () {
 
   // Selecting the input element and get its value 
   var inputVal = document.getElementById("userInput").value;
-  var pureVal = inputVal;
+  
 
   $.ajax({
     'url': "https://www.omdbapi.com/?apikey=3171b37b&t=" + inputVal,
@@ -67,31 +49,18 @@ $("#searchBtn").click(function () {
       genreResponse = response.Genre,
       directorResponse = response.Director,
       plotResponse = response.Plot;
-    console.log(titleResponse, posterResponse, ratedResponse, ratingsResponse, runtimeResponse, genreResponse, directorResponse, plotResponse);
-
-    //--Coming soon to a project near you!!
-
-    // var totalCard = titleResponse, posterResponse, ratedResponse, ratingsResponse, runtimeResponse, genreResponse, directorResponse, plotResponse;
-
-    // function  storeMovieArray(){
-
-    //   localStorage.setItem("card", JSON.stringify(totalCard));
-    // }
-
-    // $("#timeStone").on("click", function(event){
-    //   event.preventDefault();
-    // })
-
-
-
-
+    
+      
 
     document.getElementById("movieDisplay2").innerHTML =
-      `<div id="cardVanish" class="center-align card"> 
+      `<div class="center-align card totalCard"> 
                 <div class="card-image activator waves-effect waves-block waves-light"> 
                   <img src="${posterResponse}">
                 </div>` +
-      `<div class="card-content">
+      `<div id="saveMovie" class="card-content">
+          <button class="btn-floating btn-small waves-effect waves-light orange darken-2 click-to-toggle" type="submit" name="action">
+          <i class="material-icons">save</i>
+          </button>
             <span class="card-title activator blue-text text-darken-4">${titleResponse}<i class="material-icons right">more_vert</i></span>
               </div>` +
       `<div class="card-reveal">
@@ -108,24 +77,28 @@ $("#searchBtn").click(function () {
             </div>` ;
     document.getElementById("userInput").value = ""
   });
+  var movieDeets = {titleResponse, posterResponse, ratedResponse, 
+    ratingsResponse, runtimeResponse, genreResponse, directorResponse, plotResponse }
+    $(saveMovie).click = (function(){
+      localStorage.setItem('movieFile', JSON.stringify(movieDeets));        
+    }).then(function(
+    (console.log(movieFile));
+    // var miniMovie = localStorage.getItem('movieFile');
+    // console.log('miniMovie')
+ 
 
-});
 
-// var hoardBtn = localStorage.setItem(totalCard)
-// var timeStoneBtn = localStorage.getvalue('')
 
-$('#dadSearch').click(function () {
-  fetch("https://icanhazdadjoke.com/", {
-    headers: {
-      Accept: "application/json"
-    }
-  }).then(response => response.json())
-  .then(function(data) {
-   console.log(data.joke);
-   document.getElementById("dadJokes").innerText = data.joke;
-})
-       
 
-    
-
-});
+            $('#dadSearch').click(function () { 
+              fetch("https://icanhazdadjoke.com/", {
+                headers: {
+                  Accept: "application/json"
+                }
+              }).then(response => response.json())
+              .then(function(data) {
+              console.log(data.joke);
+              document.getElementById("dadJokes").innerText = data.joke;
+            });
+          });
+)};
