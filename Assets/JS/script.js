@@ -23,7 +23,7 @@ $("#searchBtn").click(function() {
               genreResponse = response.Genre,
               directorResponse = response.Director,
               plotResponse = response.Plot;
-              console.log(titleResponse, posterResponse, ratedResponse, ratingsResponse, runtimeResponse, genreResponse, directorResponse, plotResponse);
+              // console.log(titleResponse, posterResponse, ratedResponse, ratingsResponse, runtimeResponse, genreResponse, directorResponse, plotResponse);
           document.getElementById("movieDisplay2").innerHTML = 
             `<div id="cardVanish" class="center-align card"> 
                 <div class="card-image activator waves-effect waves-block waves-light"> 
@@ -61,12 +61,12 @@ $("#searchBtn").click(function() {
               var jokesContent = document.createElement("div");
               jokesContent.classList.add("hah")
               jokesContent.innerHTML = `
-              <div class="card">
+              <div class="center-align card">
                 <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="./Assets/images/cat.jpg">
+                  <img class="activator" src="./Assets/images/cat2.jpg" height="300" width="430">
                 </div>
                 <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4"> ${response.setup}<i class="material-icons right">more_vert</i></span>
+                    <span class="card-title activator grey-text text-darken-4">${response.setup}<i class="material-icons right">more_vert</i></span>
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">${response.punchline}<i class="material-icons right">close</i></span>
